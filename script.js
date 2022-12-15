@@ -94,3 +94,78 @@ console.log(result2);
 //
 //
 // Add Positive Function
+
+function addPositive(digit1, digit2) {
+  if (
+    digit1 > 0 &&
+    digit1 !== undefined &&
+    typeof digit1 === "number" &&
+    digit2 > 0 &&
+    digit2 !== undefined &&
+    typeof digit2 === "number"
+  ) {
+    const resultfirst = digit1 + digit2;
+    return resultfirst;
+  } else if (
+    digit1 < 0 &&
+    digit1 !== undefined &&
+    typeof digit1 === "number" &&
+    digit2 < 0 &&
+    digit2 !== undefined &&
+    typeof digit2 === "number"
+  ) {
+    const resultSecond = digit1 * -1 + digit2 * -1;
+    return resultSecond;
+  } else if (
+    digit1 < 0 &&
+    digit1 !== undefined &&
+    typeof digit1 === "number" &&
+    digit2 > 0 &&
+    digit2 !== undefined &&
+    typeof digit2 === "number"
+  ) {
+    const resultthird = digit1 * -1 + digit2;
+    return resultthird;
+  } else if (
+    digit1 > 0 &&
+    digit1 !== undefined &&
+    typeof digit1 === "number" &&
+    digit2 < 0 &&
+    digit2 !== undefined &&
+    typeof digit2 === "number"
+  ) {
+    const resultfourth = digit1 + digit2 * -1;
+    return resultfourth;
+  } else if (
+    digit1 === 0 &&
+    digit1 !== undefined &&
+    typeof digit1 === "number" &&
+    digit2 !== 0 &&
+    digit2 !== undefined &&
+    typeof digit2 === "number"
+  ) {
+    return digit2;
+  } else if (
+    digit1 !== 0 &&
+    digit1 !== undefined &&
+    typeof digit1 === "number" &&
+    digit2 === 0 &&
+    digit2 !== undefined &&
+    typeof digit2 === "number"
+  ) {
+    return digit1;
+  } else {
+    console.error(
+      "Argument ONE has to be a 'number' > 1, Argument TWO has to be a 'number' < 1"
+    );
+  }
+}
+
+const addition1 = addPositive(2, 3);
+console.log(addition1);
+
+const addition2 = addPositive(3, -5);
+console.log(addition2);
+
+const addition3 = addPositive(-1, -8);
+console.log(addition3);
