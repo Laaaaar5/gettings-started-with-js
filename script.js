@@ -9,12 +9,16 @@ console.log(myName);
 const greeting = "Hallo";
 console.log(greeting + " " + myName);
 
+//
+//
 //Task: Net and Gross Price
 const netPrice = 25;
 const tax = 19;
 let grossPrice = (netPrice * (100 + tax)) / 100;
 console.log(grossPrice);
 
+//
+//
 //Task: Spot the errors
 
 // console.log("Hallo"; is incorrect, the correct way in the following line
@@ -47,8 +51,46 @@ const needNothing = null;
 // console.log("I cant see the console log in the console?!");  correct way in the following lines
 
 console.log("I cant see the console log in the console?!");
-//return statement is for functions
+//return statement is for functions"
 
 // console.log("That doesn"t work"); is incorrect, the correct way in the following line
 
 console.log("That doesn't work");
+
+//
+//
+//
+//
+// Task day 2
+
+//
+//
+// Gross Price Function
+
+function calcGrossPrice(netPrice, taxRate) {
+  if (
+    netPrice >= 1 &&
+    typeof netPrice === "number" &&
+    netPrice !== undefined &&
+    taxRate < 1 &&
+    typeof netPrice === "number" &&
+    netPrice !== undefined
+  ) {
+    const finalPrice = netPrice * (1 + taxRate);
+    return finalPrice;
+  } else {
+    console.error(
+      "Argument ONE has to be a 'number' > 1, Argument TWO has to be a 'number' < 1"
+    );
+  }
+}
+
+const result1 = calcGrossPrice(20, 0.19);
+console.log(result1);
+
+const result2 = calcGrossPrice(40, 0.16);
+console.log(result2);
+
+//
+//
+// Add Positive Function
