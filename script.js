@@ -169,3 +169,37 @@ console.log(addition2);
 
 const addition3 = addPositive(-1, -8);
 console.log(addition3);
+
+//
+//
+// Foo Bar Function
+
+function fooBar(inputText) {
+  if (
+    inputText !== undefined &&
+    typeof inputText === "string" &&
+    inputText === "foo"
+  ) {
+    console.log("bar");
+  } else if (
+    inputText !== undefined &&
+    typeof inputText === "string" &&
+    inputText === "bar"
+  ) {
+    console.log("foo");
+  } else if (inputText !== undefined && typeof inputText === "string") {
+    console.log("foobar");
+  } else {
+    console.error("Input should be a string / written Line");
+  }
+}
+
+const resultOne = fooBar("foo");
+
+const resultTwo = fooBar("bar");
+
+const resultFour = fooBar("xxx");
+
+const resultFive = fooBar("aa");
+
+const resultSix = fooBar(13);
