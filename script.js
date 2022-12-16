@@ -203,3 +203,24 @@ const resultFour = fooBar("xxx");
 const resultFive = fooBar("aa");
 
 const resultSix = fooBar(13);
+
+//
+//
+//
+//
+// Day 3
+
+// countSpaces function
+
+const spaces = "I like to move it";
+let countSpaces = 0;
+
+for (let i = 0; i < spaces.length; i++) {
+  if (spaces[i] === " " && spaces !== undefined) {
+    countSpaces++;
+  } else {
+    console.error("Value of spaces has to be a string");
+  }
+}
+
+console.log(countSpaces);
